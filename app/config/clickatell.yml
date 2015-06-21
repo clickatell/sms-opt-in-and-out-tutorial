@@ -1,0 +1,3 @@
+clickatell:
+    class: "Clickatell\Api\ClickatellHttp"
+    arguments: ["zachie", "test123", "763522"]

@@ -1,3 +1,7 @@
+clickatell_sms_opt_in_and_out:
+    resource: "@ClickatellSMSOptInAndOutBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

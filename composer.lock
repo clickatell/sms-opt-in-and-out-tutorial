@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "da966dd2ac924fbd6a3e9c5d87fa2144",
+    "hash": "d32086d358b3e9ec73805ca3e0c3a500",
     "packages": [
+        {
+            "name": "arcturial/clickatell",
+            "version": "dev-feature-mo-callback",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arcturial/clickatell.git",
+                "reference": "112828478a743c1c42bc9011182380dd59fd02d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arcturial/clickatell/zipball/112828478a743c1c42bc9011182380dd59fd02d0",
+                "reference": "112828478a743c1c42bc9011182380dd59fd02d0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clickatell\\": [
+                        "src",
+                        "test"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU General Public License"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Brand",
+                    "email": "webmaster@cainsvault.com"
+                }
+            ],
+            "description": "Standalone PHP library to integrate with the Clickatell SMS gateway",
+            "homepage": "http://www.cainsvault.com",
+            "time": "2015-06-15 13:34:51"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.4",
@@ -1614,7 +1657,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "arcturial/clickatell": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
