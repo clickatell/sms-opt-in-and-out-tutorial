@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JZ
- * Date: 2015/06/21
- * Time: 5:31 PM
- * persistence
- */
 
 namespace Clickatell\SMSOptInAndOutBundle\Keyword;
 
@@ -14,6 +7,9 @@ use Doctrine\ORM\EntityManager;
 
 class KeywordManager
 {
+    /**
+     * @var array
+     */
     protected $keywordStrategies = array();
 
     /**

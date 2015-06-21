@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JZ
- * Date: 2015/06/21
- * Time: 5:27 PM
- */
 
 namespace Clickatell\SMSOptInAndOutBundle\Keyword;
-
 
 use Clickatell\SMSOptInAndOutBundle\Entity\Subscriber;
 use Doctrine\Bundle\DoctrineBundle\Registry;

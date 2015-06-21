@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JZ
- * Date: 2015/06/21
- * Time: 9:34 PM
- */
 
 namespace Clickatell\SMSOptInAndOutBundle\Keyword;
 
