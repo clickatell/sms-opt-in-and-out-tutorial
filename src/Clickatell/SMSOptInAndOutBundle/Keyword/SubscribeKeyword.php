@@ -33,11 +33,12 @@ class SubscribeKeyword implements KeywordStrategyInterface
         if ($this->Supported($values))
         {
             $subscriber = new Subscriber();
-            $subscriber->setMsisdn($values['form']);
-            $subscriber->getName('Unknown');
+            $subscriber->setMsisdn($values['from']);
+            $subscriber->setName(substr($values['text'],10));
             $subscriber->setStatus(1);
-            $em = $this->em->getManager();
+            $em = $this->em;
             $em->persist($subscriber);
+            $em->flush();
         }
     }
 

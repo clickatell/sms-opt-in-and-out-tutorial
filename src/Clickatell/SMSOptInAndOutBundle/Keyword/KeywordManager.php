@@ -22,6 +22,7 @@ class KeywordManager
     public function __construct(EntityManager $em)
     {
         $this->keywordStrategies[] = new SubscribeKeyword($em);
+        $this->keywordStrategies[] = new UnSubscribeKeyword($em);
     }
 
     /**

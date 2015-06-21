@@ -18,6 +18,7 @@ class CallbackController extends Controller
         $this->_LogMoEntry($values);
         $km = $this->getKeywordManager();
         $km->HandleMoCallback($values);
+        return new Response("OK");
     }
 
     /**
@@ -26,8 +27,9 @@ class CallbackController extends Controller
      */
     public function moReceivedAction()
     {
-        Callback::parseMoCallback(array($this,"moReceived"));
-        return new Response("Nothing Received!");
+        $oResponse = Callback::parseMoCallback(array($this,"moReceived"));
+        $oResponse = ($oResponse instanceof Response) ? $oResponse : new Response("Nothing Received!");
+        return $oResponse;
     }
 
     /**
