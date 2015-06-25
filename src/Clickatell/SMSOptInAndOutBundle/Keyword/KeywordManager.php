@@ -27,12 +27,12 @@ class KeywordManager
      */
     public function HandleMoCallback(array $values)
     {
-        /** @var KeywordStrategyInterface $class */
-        foreach ($this->keywordStrategies as $class)
+        /** @var KeywordStrategyInterface $strategy */
+        foreach ($this->keywordStrategies as $strategy)
         {
-            if ($class::Supported($values))
+            if ($strategy::Supported($values))
             {
-                $class->Handle($values);
+                $strategy->Handle($values);
                 return true;
             }
         }
