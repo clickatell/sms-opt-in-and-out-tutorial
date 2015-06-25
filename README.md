@@ -63,3 +63,6 @@ The callback controller user the Keyword Manager and it's strategies to identify
 
 see Clickatell/SMSOptInAndOutBundle/Keyword/* for more detail.
 
+Don't forget your configs for routing:  
+
+    Clickatell/SMSOptInAndOutBundle/Resources/config/routing.yml
