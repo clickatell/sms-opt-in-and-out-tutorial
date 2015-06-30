@@ -6,24 +6,33 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
         $subscribers = $this->getDoctrine()
             ->getRepository('ClickatellSMSOptInAndOutBundle:Subscriber')
             ->findAll();
 
+        print "<h1>Subscribers</h1>";
         print "<pre>";
-        print_r($subscribers);
+        /** @type \Clickatell\SMSOptInAndOutBundle\Entity\Subscriber $subscriber */
+        foreach ($subscribers as $subscriber)
+        {
+            print "$subscriber\n";
+        }
         print "</pre>";
 
         $log = $this->getDoctrine()
             ->getRepository('ClickatellSMSOptInAndOutBundle:Mo\Log')
             ->findAll();
 
+        print "<h1>Mo Log</h1>";
         print "<pre>";
-        print_r($log);
+        foreach ($log as $entry)
+        {
+            print "$entry\n";
+        }
         print "</pre>";
 
-        return $this->render('ClickatellSMSOptInAndOutBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('ClickatellSMSOptInAndOutBundle:Default:index.html.twig');
     }
 }

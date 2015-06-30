@@ -241,4 +241,22 @@ class Log
     {
         return $this->content;
     }
+
+    /**
+     * __toString
+     *
+     * @return string
+     */
+    function __toString()
+    {
+        return json_encode(array(
+            $this->getId(),
+            $this->getSender(),
+            $this->getReceiver(),
+            $this->getNetwork(),
+            $this->getTimestamp(),
+            $this->getContent()
+        ), true);
+    }
+
 }

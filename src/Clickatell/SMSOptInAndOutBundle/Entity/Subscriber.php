@@ -121,4 +121,19 @@ class Subscriber
     {
         return $this->status;
     }
+
+    /**
+     * __toString
+     *
+     * @return string
+     */
+    function __toString()
+    {
+        return json_encode(array(
+            $this->getId(),
+            $this->getMsisdn(),
+            $this->getName()
+        ), true);
+    }
+
 }

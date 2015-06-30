@@ -1,5 +1,5 @@
 clickatell_sms_opt_in_and_out_homepage:
-    path:     /hello/{name}
+    path:     /subscriber/
     defaults: { _controller: ClickatellSMSOptInAndOutBundle:Default:index }
 
 clickatell_sms_opt_in_and_out_callback:
